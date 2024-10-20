@@ -19,47 +19,6 @@
 
 # shellcheck disable=SC2317
 
-# Bugzilla 37848: When no TTY is available, don't output to console
-have_tty=0
-# shellcheck disable=SC2006
-if [[ "`tty`" != "not a tty" ]]; then
-  have_tty=1
-fi
-
-# Bugzilla 37848: When no TTY is available, don't output to console
-have_tty=0
-# shellcheck disable=SC2006
-if [[ "`tty`" != "not a tty" ]]; then
-  have_tty=1
-fi
-
- # Only use colors if connected to a terminal
-if [[ ${have_tty} -eq 1 ]]; then
-  RED=$(printf '\033[31m')
-  GREEN=$(printf '\033[32m')
-  BLUE=$(printf '\033[34m')
-  RESET=$(printf '\033[0m')
-else
-  RED=""
-  GREEN=""
-  BLUE=""
-  RESET=""
-fi
-
-echo_r () {
-  # Color red: Error, Failed
-  [[ $# -ne 1 ]] && return 1
-  # shellcheck disable=SC2059
-  printf "[%sStreamPark%s] %s$1%s\n"  "$BLUE" "$RESET" "$RED" "$RESET"
-}
-
-echo_g () {
-  # Color green: Success
-  [[ $# -ne 1 ]] && return 1
-  # shellcheck disable=SC2059
-  printf "[%sStreamPark%s] %s$1%s\n"  "$BLUE" "$RESET" "$GREEN" "$RESET"
-}
-
 # OS specific support.  $var _must_ be set to either true or false.
 cygwin=false;
 darwin=false;
@@ -97,7 +56,7 @@ fi
 # For Mingw, ensure paths are in UNIX format before anything is touched
 if $mingw ; then
   [ -n "$JAVA_HOME" ] && [ -d "$JAVA_HOME" ] &&
-    JAVA_HOME="$(cd "$JAVA_HOME" || (echo_r "cannot cd into $JAVA_HOME."; exit 1); pwd)"
+    JAVA_HOME="$(cd "$JAVA_HOME" || (echo "cannot cd into $JAVA_HOME."; exit 1); pwd)"
 fi
 
 if [ -z "$JAVA_HOME" ]; then
@@ -134,13 +93,13 @@ if [ -z "$JAVACMD" ] ; then
 fi
 
 if [ ! -x "$JAVACMD" ] ; then
-  echo_r "Error: JAVA_HOME is not defined correctly." >&2
-  echo_r "  We cannot execute $JAVACMD" >&2
+  echo "Error: JAVA_HOME is not defined correctly." >&2
+  echo "  We cannot execute $JAVACMD" >&2
   exit 1
 fi
 
 if [ -z "$JAVA_HOME" ] ; then
-  echo_r "Warning: JAVA_HOME environment variable is not set."
+  echo "Warning: JAVA_HOME environment variable is not set."
 fi
 
 _RUNJAVA="$JAVA_HOME/bin/java"
@@ -182,14 +141,14 @@ download() {
     wget "$url" -O "$path" || rm -f "$path"
     # shellcheck disable=SC2181
     if [[ $? -ne 0 ]]; then
-      echo_r "download $name failed, please try again."
+      echo "download $name failed, please try again."
       exit 1
     fi
   elif command -v curl > /dev/null; then
     curl -o "$path" "$url" -f -L || rm -f "$path"
     # shellcheck disable=SC2181
     if [[ $? -ne 0 ]]; then
-      echo_r "download $name failed, please try again."
+      echo "download $name failed, please try again."
       exit 1
     fi
   else
@@ -220,7 +179,7 @@ download() {
     "$JAVA_HOME/bin/java" -cp "${WORK_DIR}" Downloader "$url" "$path" && rm -f "${WORK_DIR}"/Downloader.class
 
     if [[ $? -ne 0 ]]; then
-      echo_r "download $name failed, please try again."
+      echo "download $name failed, please try again."
       exit 1
     fi
   fi
@@ -229,7 +188,7 @@ download() {
 BASH_UTIL="org.apache.streampark.console.base.util.BashJavaUtils"
 
 # 1). download streampark.
-echo_g "download streampark..."
+echo "download streampark..."
 
 download "$SP_URL" "$SP_TAR" "$SP_PATH"
 tar -xvf "${SP_TAR}" >/dev/null 2>&1 \
@@ -262,7 +221,7 @@ else
   FLINK_PATH="${WORK_DIR}"/"${FLINK_TAR}"
 
   # 1) download flink
-  echo_g "download flink..."
+  echo "download flink..."
   download "$FLINK_URL" "$FLINK_TAR" "$FLINK_PATH"
   tar -xvf "${FLINK_TAR}" >/dev/null 2>&1 \
     && rm -r "${FLINK_TAR}" \
