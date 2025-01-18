@@ -228,7 +228,8 @@ const config = {
 
         <div>
           <span>
-            Copyright © 2022-${new Date().getFullYear()} The Apache Software Foundation. Apache StreamPark, StreamPark, and its feather logo are trademarks of The Apache Software Foundation.
+            Copyright © 2022-${new Date().getFullYear()}, The Apache Software Foundation</br>
+            Apache StreamPark, StreamPark, Apache, the Apache feather and the Apache StreamPark project logo are either registered trademarks or trademarks of the Apache Software Foundation.
           </span>
         </div>
       </div>`,
