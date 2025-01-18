@@ -71,7 +71,7 @@ Subject: [VOTE] New committer: ${NEW_COMMITTER_NAME}
 ```
 
 ```text
-Hi StreamPark PPMC,
+Hi StreamPark PMC,
 
 This is a formal vote about inviting ${NEW_COMMITTER_NAME} as our new committer.
 
@@ -92,7 +92,7 @@ Subject: [RESULT] [VOTE] New committer: ${NEW_COMMITTER_NAME}
 ```
 
 ```text
-Hi StreamPark PPMC,
+Hi StreamPark PMC,
 
 The vote has now closed. The results are:
 
@@ -207,7 +207,7 @@ requires adherence to the ASF Code of Conduct:
   https://www.apache.org/foundation/policies/conduct.html
 
 Yours,
-The Apache StreamPark PPMC
+The Apache StreamPark PMC
 ```
 
 ### Committer Done Template
@@ -241,5 +241,5 @@ Naturally, if you don't understand anything be sure to ask us on the dev@streamp
 Documentation is maintained by volunteers and hence can be out-of-date and incomplete - of course
 you can now help fix that.
 
-A PPMC member will announce your election to the dev list soon.
+A PMC member will announce your election to the dev list soon.
 ```

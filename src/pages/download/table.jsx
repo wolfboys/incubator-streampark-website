@@ -17,44 +17,44 @@ export default function (props) {
   function getSourceLink(version) {
     const prefix = latest ? dynURL : archiveURL
     return prefix
-      .concat(version)
-      .concat('/apache-streampark-')
-      .concat(version)
-      .concat('-src.tar.gz')
-      .concat('?action=download')
+        .concat(version)
+        .concat('/apache-streampark-')
+        .concat(version)
+        .concat('-incubating-src.tar.gz')
+        .concat('?action=download')
   }
 
-    function getBinaryLink(scala, version) {
-        const prefix = latest ? dynURL : archiveURL;
-        return prefix
-            .concat(version)
-            .concat('/apache-streampark_')
-            .concat(scala)
-            .concat('-')
-            .concat(version)
-            .concat('-bin.tar.gz')
-            .concat('?action=download')
-    }
+  function getBinaryLink(scala, version) {
+    const prefix = latest ? dynURL : archiveURL;
+    return prefix
+        .concat(version)
+        .concat('/apache-streampark_')
+        .concat(scala)
+        .concat('-')
+        .concat(version)
+        .concat('-incubating-bin.tar.gz')
+        .concat('?action=download')
+  }
 
   function getSourceSigs(version, suffix) {
     const prefix = latest ? downloadURL : archiveURL;
     return prefix.concat(version)
-      .concat('/apache-streampark-')
-      .concat(version)
-      .concat('-src.tar.gz')
-      .concat(suffix)
+        .concat('/apache-streampark-')
+        .concat(version)
+        .concat('-incubating-src.tar.gz')
+        .concat(suffix)
   }
 
   function getBinarySigs(scala, version, suffix) {
     const prefix = latest ? downloadURL : archiveURL;
     return prefix
-      .concat(version)
-      .concat('/apache-streampark_')
-      .concat(scala)
-      .concat('-')
-      .concat(version)
-      .concat('-bin.tar.gz')
-      .concat(suffix)
+        .concat(version)
+        .concat('/apache-streampark_')
+        .concat(scala)
+        .concat('-')
+        .concat(version)
+        .concat('-incubating-bin.tar.gz')
+        .concat(suffix)
   }
 
   const releaseData = tableData.map((release) => {

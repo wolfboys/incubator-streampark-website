@@ -14,8 +14,8 @@ interface AchievementBannerProps {
 
 export default function AchievementBanner(props: AchievementBannerProps) {
   const [githubState, setGitHubState] = React.useState({
-    stars: 3710,
-    forks: 963,
+    stars: 3940,
+    forks: 1001,
     downloads: 9900,
   });
 

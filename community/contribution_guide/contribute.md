@@ -2,7 +2,7 @@
 
 First of all, thank you very much for choosing and using StreamPark, and welcome to join the StreamPark family!
 
-We encourage any form of participation in the community that will eventually become Committer or PPMC Such as:
+We encourage any form of participation in the community that will eventually become Committer or PMC Such as:
 * Problems will be encountered via github on the [issue](https://github.com/apache/streampark/issues) form feedback out.
 * Answer the issue questions that others are asking.
 * Help improve the documentation.

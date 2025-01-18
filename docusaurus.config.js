@@ -222,14 +222,7 @@ const config = {
         copyright: `<div>
         <div>
           <div style="margin-bottom: 30px;">
-            <a href="https://incubator.apache.org/" class="footerLogoLink" one-link-mark="yes">
-              <img alt="Apache Incubator logo" class="footer__logo" width="200">
-            </a>
-          </div>
-          <div>
-            <p>
-            Apache StreamPark is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
-            </p>
+              <img alt="Apache Software Foundation" class="footer__logo" width="400">
           </div>
         </div>
 

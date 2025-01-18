@@ -182,7 +182,7 @@ cd apache-streampark-${release_version}-incubating-src
 <font color="red">
 回复的邮件一定要带上自己检查了那些项信息，仅仅回复`+1 approve`，是无效的。
 
-PPMC在dev@streampark.apache.org StreamPark 的社区投票时，请带上 binding后缀，表示对 StreamPark 社区中的投票具有约束性投票，方便统计投票结果。
+PMC在dev@streampark.apache.org StreamPark 的社区投票时，请带上 binding后缀，表示对 StreamPark 社区中的投票具有约束性投票，方便统计投票结果。
 
 IPMC在general@incubator.apache.org incubator社区投票，请带上 binding后缀，表示对incubator社区中的投票具有约束性投票，方便统计投票结果。
 
@@ -192,7 +192,7 @@ IPMC在general@incubator.apache.org incubator社区投票，请带上 binding后
 如果在dev@streampark.apache.org已经投过票，在incubator社区进行投票回复时，可以直接带过去,<font color="red">需要注意约束性</font>  如:
 
 ```html
-//incubator社区 投票时，只有IPMC成员才具有约束性 binding，PPMC需要注意约束性的变化
+//incubator社区 投票时，只有IPMC成员才具有约束性 binding，PMC需要注意约束性的变化
 Forward my +1 from dev@streampark (non-binding)
 Copy my +1 from streampark DEV ML (non-binding)
 ```
@@ -200,7 +200,7 @@ Copy my +1 from streampark DEV ML (non-binding)
 
 
 
-非PPMC/IPMC成员
+非PMC/IPMC成员
 ```html
 +1 (non-binding)
 I  checked:
@@ -211,7 +211,7 @@ I  checked:
     5. ....
 ```
 
-PPMC/IPMC成员
+PMC/IPMC成员
 ```html
 //incubator社区 投票时，只有IPMC成员才具有约束性 binding
 +1 (binding)

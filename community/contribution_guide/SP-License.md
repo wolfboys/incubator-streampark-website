@@ -12,7 +12,7 @@ You have to pay attention to the following open-source software protocols which 
 
 If the 3rd party software is not present at the above policy, we are sorry that your code can not pass the audit and we suggest searching for other substitute plans.
 
-Besides,  when you demand new dependencies in the project, please email us about the reason and the outcome of the influence to dev@StreamPark.apache.org to discuss. Besides, you need at least 3 positive votes from the PPMC to finish the whole step.
+Besides,  when you demand new dependencies in the project, please email us about the reason and the outcome of the influence to dev@StreamPark.apache.org to discuss. Besides, you need at least 3 positive votes from the PMC to finish the whole step.
 
 ### How to Legally Use 3rd Party Open-source Software in the StreamPark
 
