@@ -28,7 +28,7 @@ import './style.less';
 import BannerVideo from '@site/src/components/BannerVideo';
 
 export default function HomePage() {
-  const INSTALL_COMMAND = `curl -L https://github.com/apache/streampark/raw/dev/streampark.sh | sh`;
+  const INSTALL_COMMAND = `curl -L https://streampark.apache.org/quickstart.sh | sh`;
 
   const { t, language } = useTranslation(config);
 

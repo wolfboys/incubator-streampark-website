@@ -16,7 +16,7 @@ export default function () {
     isBrowser && location.pathname.indexOf('/zh-CN/') === 0 ? 'zh-CN' : 'en';
   const dataSource = config?.[language];
 
-  const INSTALL_COMMAND = `curl -L https://github.com/apache/streampark/raw/dev/streampark.sh | sh`;
+  const INSTALL_COMMAND = `curl -L https://streampark.apache.org/quickstart.sh | sh`;
 
   return (
     <>

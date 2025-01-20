@@ -16,8 +16,7 @@ interface BannerVideoProps {
 export default function BannerVideo(props: BannerVideoProps) {
   const [isShowVideo, setIsShowVideo] = useState(false);
 
-  const videoURL =
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
+  const videoURL = 'https://streampark.apache.org/quickstart.mp4';
 
   const coverImage = useBaseUrl('/home/screenshot.png');
 
