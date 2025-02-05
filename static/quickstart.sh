@@ -235,7 +235,7 @@ else
 fi
 
 # 3) start streampark
-bash +x "${SP_HOME}"/bin/startup.sh \
+exec "${SP_HOME}"/bin/startup.sh \
   --quickstart flink_home="$FLINK_HOME" \
   --quickstart flink_port="$FLINK_PORT" \
   --quickstart flink_name="quickstart-$FLINK_NAME"
