@@ -292,7 +292,7 @@ else
   FLINK_PORT=$($_RUNJAVA -cp "${SP_HOME}/lib/*" $BASH_UTIL --free_port "8081")
   $_RUNJAVA -cp "${SP_HOME}/lib/*" $BASH_UTIL --replace "$SP_CONFIG" "# port: 8081||port: ${FLINK_PORT}"
 
-  exec "${FLINK_HOME}"/bin/start-cluster.sh
+  . "${FLINK_HOME}"/bin/start-cluster.sh
 fi
 
 # 3) start streampark
