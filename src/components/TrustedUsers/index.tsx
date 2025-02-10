@@ -18,8 +18,6 @@ export default function TrustedUsers() {
 
   const { colorMode } = useColorMode();
 
-  // const row1 = images.slice(0, images.length / 2);
-  // const row2 = images.slice(images.length / 2);
 
   const gradientColor = colorMode === 'dark' ? '#1f1f1c' : '#fff';
 
@@ -48,8 +46,8 @@ export default function TrustedUsers() {
                   <img
                     src={
                       colorMode === 'dark'
-                        ? useBaseUrl('/home/brands/plain/' + img.imgUrl)
-                        : useBaseUrl('/home/brands/colorful/' + img.imgUrl)
+                        ? useBaseUrl('/home/user/dark/' + img.imgUrl)
+                        : useBaseUrl('/home/user/light/' + img.imgUrl)
                     }
                     alt={img.imgUrl}
                   />
@@ -74,8 +72,8 @@ export default function TrustedUsers() {
                   <img
                     src={
                       colorMode === 'dark'
-                        ? useBaseUrl('/home/brands/plain/' + img.imgUrl)
-                        : useBaseUrl('/home/brands/colorful/' + img.imgUrl)
+                        ? useBaseUrl('/home/user/dark/' + img.imgUrl)
+                        : useBaseUrl('/home/user/light/' + img.imgUrl)
                     }
                     alt={img.imgUrl}
                   />
